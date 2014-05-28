@@ -36,12 +36,14 @@ import org.json.Kim;
  * @version 2013-05-03
  */
 class Keep implements None, PostMortem {
-    private int capacity;
+    protected int capacity;
+    //public int capacity() { return capacity; }
     protected int length;
     private Object[] list;
     private HashMap<Object, Integer> map;
     private int power;
     private long[] ticks;
+    public long[] uses() { return ticks; };
 
     public Keep(int bits) {
         this.capacity = 1 << bits;
